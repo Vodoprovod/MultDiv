@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.board, .progress, .resumeSec {
+    background-color: rgba(3, 241, 23, 0.158);
+    width: 30vw;
+    margin: auto;
+    padding: 1em;
+}
+
+.board, .progressRecord {
+    display: flex;    
+}
+
+.board, .progress {
+    justify-content: center;
+}
+
+.progressRecord {
+    padding: .5em;
+    margin: auto;
+}
+
+.mngBtn, .exercise {
+    font-size: 3em;
+    margin: .2em;
+}
+
+.pgrComp {
+    margin-right: .5em;
+}
+
+.mngBtn {
+    width: 20vw;
+    margin: auto;
+    border-radius: .2em;
+}
+
+.answer {
+    width: 2em;
+    border-radius: .2em;
+    text-align: center;
+}
