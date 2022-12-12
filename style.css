@@ -1,15 +1,32 @@
-* {
+:root {
+	padding: 0;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: calc(0.7vw + 0.1em);
 }
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
 
 .board, .progress, .resumeSec {
     background-color: rgba(3, 241, 23, 0.158);
-    width: 30vw;
+    width: 40vw;
     margin: auto;
-    padding: 1em;
+    padding: .2em 2em;
 }
+
+@media (max-width: 35em) {
+	 .board, .progress, .resumeSec {
+		 width: auto;
+	 }
+ }
+
 
 .board, .progressRecord {
     display: flex;    
@@ -19,24 +36,31 @@
     justify-content: center;
 }
 
+
 .progressRecord {
-    padding: .5em;
-    margin: auto;
+    padding: 0;
+    margin: 0;
+	line-height: .1rem;
+}
+
+.list {
+	padding: 0;
 }
 
 .mngBtn, .exercise {
-    font-size: 3em;
-    margin: .2em;
+    font-size: 3rem;
+    margin: .1em;
 }
 
 .pgrComp {
     margin-right: .5em;
+	font-size: 2rem;
 }
 
 .mngBtn {
-    width: 20vw;
-    margin: auto;
-    border-radius: .2em;
+    width: calc(19vw + 1em);
+    margin: .2em;
+	border-radius: .2em;
 }
 
 .answer {

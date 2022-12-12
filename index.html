@@ -20,13 +20,8 @@
             <button class="mngBtn">ОК</button>
         </section>
         <section class="progress">
-            <div>
-                <ul class="list">
-                </ul>
-            </div>
-            <div>
-                
-            </div>
+			<ul class="list">
+			</ul>
         </section>
         <script>
             let result, resMult, firstCompValue, secondCompValue, operatorValue;
@@ -92,6 +87,12 @@
             mainFunction();
 
             button.onclick = function() {
+				if (isNaN(answer.value)) {
+					alert('В поле ввода необходимо ввести число!');
+					answer.value = '';
+					answer.focus();
+					return;
+				}
                 let resume = result === parseInt(answer.value);
                 
                 if (resume) 
@@ -100,11 +101,11 @@
                     counterNeg++;
 
                list.insertAdjacentHTML('afterbegin', 
-               `<li class="progressRecord"><h1 class="pgrComp">
+               `<li class="progressRecord"><p class="pgrComp">
                     ${firstComp.textContent} 
                     ${operator.textContent} 
                     ${secondComp.textContent} = ${answer.value}
-                </h1><h1 class="pgrComp">${resume ? 'Да' : 'Нет'}</h1></li>`);
+                </p><p class="pgrComp">${resume ? 'Да' : 'Нет'}</p></li>`);
 
                 allresume.textContent = `Правильных ответов: ${counterPos} из ${counterPos + counterNeg}`;
 
