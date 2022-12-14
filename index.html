@@ -87,7 +87,7 @@
             mainFunction();
 
             button.onclick = function() {
-				if (isNaN(answer.value)) {
+				if (isNaN(answer.value) || answer.value === '') {
 					alert('В поле ввода необходимо ввести число!');
 					answer.value = '';
 					answer.focus();
